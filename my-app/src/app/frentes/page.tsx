@@ -1,18 +1,12 @@
 import Image from "next/image";
 import AccordionSection from "../components/AccordionSection";
 import {CarouselDefault} from "../components/CarouselDefault";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
-    
   <div>
-  <div className="flex flex-row place-content-end bg-[#9C1B2E] p-4 text-2xl font-medium text-white">
-    <div className="pr-6">INÍCIO</div>
-    <div className="pr-6">ÁREAS DE ATUAÇÃO</div>
-    <div className="pr-6">CONTEÚDOS</div>
-    <div className="pr-6">CONTATO</div>
-  </div>
-
+    <Header/>
   <div className="w-full items-center flex justify-center bg-[#F2E0DF]">
     <Image
           className="place-content-center" src="/Site.png" alt="Next.js logo" width={800} height={100}  

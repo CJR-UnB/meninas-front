@@ -32,28 +32,27 @@ export function CarouselDefault() {
       >
         {"<"}
       </button>
-
       {/* Carrossel */}
-      <div className="overflow-hidden w-full">
-        <div className="flex transition-transform duration-500 ease-in-out" style = {{width: "100%"}}>
-          {images.slice(0, visibleCount).map((src, i) => (
-            <div
-              key={i}
-              className="min-w-[30%] flex justify-center m-4"
-              style={{ height: "300px" }} // altura padrão
-            >
-              <div className="relative w-[400px] h-[300px]">
-                <Image
-                  src={src}
-                  alt={`Imagem ${i + 1}`}
-                  fill
-                  className="rounded-lg object-cover"
-                />
-              </div>
+    <div className="overflow-hidden w-full p-8">
+      <div className="flex transition-transform duration-500 ease-in-out gap-4">
+        {images.slice(0, visibleCount).map((src, i) => (
+          <div
+            key={i}
+            className="w-1/3 flex justify-center"
+            style={{ aspectRatio: "4 / 3" }} // largura:altura (ex: 400x300)
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src={src}
+                alt={`Imagem ${i + 1}`}
+                fill
+                className="rounded-lg object-cover"
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+    </div>
 
       {/* Botão direito */}
       <button
